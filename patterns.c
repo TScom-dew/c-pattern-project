@@ -1,6 +1,5 @@
 
-
-//? all paterns funtion
+// all paterns funtion
 #include<stdio.h>
 #include<windows.h>
 #include "patterns.h"
