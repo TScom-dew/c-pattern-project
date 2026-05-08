@@ -1,4 +1,4 @@
-name: C Pattern Build & Run
+name: C Pattern Build & Run - Windows CI
 
 on:
   push:
@@ -16,11 +16,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Install GCC on Windows
+      - name: Setup GCC on Windows
         uses: Minituff/setup-gcc@v2
 
       - name: Compile all C files
-        run: gcc main.c patterns.c -o pattern_program.exe -Wall
+        run: gcc main.c patterns.c -o pattern_program.exe -Wall -Wextra
 
       - name: Run program
         run: pattern_program.exe
