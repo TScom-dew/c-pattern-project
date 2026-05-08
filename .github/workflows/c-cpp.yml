@@ -1,0 +1,20 @@
+name: C Pattern Build & Run
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Compile all C files
+      run: gcc main.c patterns.c -o pattern_program -Wall
+      
+    - name: Run program
+      run: ./pattern_program
