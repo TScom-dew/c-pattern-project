@@ -25,8 +25,9 @@ Made by: Ashlok Kumar [@TScom-dew](https://github.com/TScom-dew)
 ```bash
 gcc main.c patterns.c -o program
 .\program
-\
 ```
+
+
 ### For Linux/Mac:
 ```base
 gcc main.c patterns.c -o program
@@ -41,7 +42,6 @@ This repo uses GitHub Actions for CI/CD. On every push to main branch:
 3. Status Badge: ✅ Green = Build Pass, ❌ Red = Build Fail
 
 👉 Check the `Actions` tab for live build status.
-
 ```
 
 
@@ -58,7 +58,7 @@ This repo uses GitHub Actions for CI/CD. On every push to main branch:
 ### 🌟 Show Your Support
 
 If you liked this project or it helped you learn something, please consider giving it a ⭐! 
-Your star motivates me to build more projects like this.
+
 
 Found a bug or have a suggestion? Feel free to [open an issue](https://github.com/TScom-dew/c-pattern-project/issues) or drop a feedback. All feedbacks are appreciated!
 
