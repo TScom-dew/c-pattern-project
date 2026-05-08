@@ -9,18 +9,21 @@ on:
 jobs:
   build:
     runs-on: windows-latest
-    defaults:
-      run:
-        shell: cmd
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup GCC on Windows
-        uses: Minituff/setup-gcc@v2
+      - name: Setup MinGW
+        uses: msys2/setup-msys2@v2
+        with:
+          msystem: MINGW64
+          update: true
+          install: mingw-w64-x86_64-gcc
 
       - name: Compile all C files
-        run: gcc main.c patterns.c -o pattern_program.exe -Wall -Wextra
+        shell: msys2 {0}
+        run: gcc main.c patterns.c -o pattern_program.exe -Wall
 
       - name: Run program
-        run: pattern_program.exe
+        shell: msys2 {0}
+        run: ./pattern_program.exe
