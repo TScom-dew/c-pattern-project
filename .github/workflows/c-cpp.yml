@@ -9,12 +9,18 @@ on:
 jobs:
   build:
     runs-on: windows-latest
+    defaults:
+      run:
+        shell: cmd
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-      
-    - name: Compile all C files
-      run: gcc main.c patterns.c -o pattern_program -Wall
-      
-    - name: Run program
-      run: ./pattern_program
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install GCC on Windows
+        uses: Minituff/setup-gcc@v2
+
+      - name: Compile all C files
+        run: gcc main.c patterns.c -o pattern_program.exe -Wall
+
+      - name: Run program
+        run: pattern_program.exe
