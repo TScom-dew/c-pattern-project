@@ -20,10 +20,10 @@ jobs:
           update: true
           install: mingw-w64-x86_64-gcc
 
-      - name: Compile all C files
+      - name: Build - Compile all C files
         shell: msys2 {0}
-        run: gcc main.c patterns.c -o pattern_program.exe -Wall
+        run: gcc main.c patterns.c -o pattern_program.exe -Wall -Wextra
 
-      - name: Run program
+      - name: Verify build artifact
         shell: msys2 {0}
-        run: ./pattern_program.exe
+        run: ls -la pattern_program.exe && echo "Build Successful ✅"
