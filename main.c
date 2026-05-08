@@ -13,15 +13,6 @@ firs command: gcc main.c patterns.c -o program
 second command : .\program
 */
 
-// void triangle();
-// void  reverse_triangle();
-// void pascaltriangle();
-// void circle();
-// void square();
-// void pyramid();
-// void diamond();
-// void butterfly();
-
 
 int main(){
 
@@ -36,8 +27,7 @@ int main(){
     printf("     Let's Generate Patterns\n");
     printf("=================================\n\n");
 
-    //?   kabbi bhi case ke andar diclaration nhi hota hai sirf statement hota hai aur declaration koi statement nhi hai.
-
+   
     while (!isexit){
 
         printf("   Pattern's name:\n1.Triangle\n2.Reverse triangle.\n3.Pascal Triangle\n4.Pyramid\n5.Diamond\n6.Butterfly\n7.Circle\n8.Square\n ");
