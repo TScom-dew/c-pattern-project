@@ -1,4 +1,7 @@
 # C Pattern Project 🔥
+![Build Status](https://github.com/TScom-dew/c-pattern-project/actions/workflows/c-cpp.yml/badge.svg)
+
+A console-based C program designed to generate various geometric...
 A console-based C program designed to generate various geometric and mathematical patterns. This project serves as a great tool for understanding nested loops and logic in C programming.
 
 ## 🚀 Features
