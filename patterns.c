@@ -1,14 +1,19 @@
 
-// all paterns funtion
+
+//? all paterns funtion
 #include<stdio.h>
-#include<windows.h>
 #include "patterns.h"
 
-
+#ifdef _WIN32
+    #include<windows.h>
+     #define SLEEP_MS(ms)  Sleep(ms)
+#else
+    #include<unistd.h>
+    #define SLEEP_MS(ms)  usleep((ms), 10000)
+#endif
 
 void triangle(){ 
 
-    // system("cls");
     int n = 0;
     printf("Enter the height of triangle: ");
     scanf("%d", &n);
@@ -20,7 +25,7 @@ void triangle(){
         for (int j = 0; j <=i; j++){
 
             printf("* ");
-            // Sleep(300);// to slow the process
+            
         }
 
         printf("\n");
@@ -30,7 +35,6 @@ void triangle(){
 
 void  reverse_triangle(){
 
-    // system("cls");
     int n = 0;
     printf("Enter the height of reverse triangle: ");
     scanf("%d", &n);
@@ -43,19 +47,18 @@ void  reverse_triangle(){
         for (int j = 0; j <i; j++){
 
             printf("*  ");
-            // Sleep(300);// to slow the process
+           
         }
 
         printf("\n");
     } 
 
-    Sleep(500);
+    SLEEP_MS(500);
 
 }
 
 void pascaltriangle(){
 
-    // system("cls");
 
     int n;
     printf("Enter number of rows: ");
@@ -75,22 +78,20 @@ void pascaltriangle(){
 
             printf("%6lld",value);
 
-            // Sleep(300);// to slow the process
+        
             value = value * (i - j) / (j + 1);
         }
 
         printf("\n");
     }
 
-    Sleep(500);
+    SLEEP_MS(500);
 
     
 }
 
 void pyramid(){
    
-    // system("cls");
-
     int n = 0;
     printf("Enter the height of pyramid : ");
     scanf("%d", &n);
@@ -107,19 +108,18 @@ void pyramid(){
         for (int j = 1; j <=i; j++)
         {
             printf("*     ");
-            // Sleep(300);// to slow the process
+        
         }
 
         printf("\n");
     }
 
-    Sleep(500);
+    SLEEP_MS(500);
 
 }
 
  void diamond(){
 
-    // system("cls");
 
     int n = 0;
     printf("Enter the height of diamond : ");
@@ -137,7 +137,7 @@ void pyramid(){
         for (int j = 1; j <=i; j++)
         {
             printf("*     ");
-            // Sleep(300);// to slow the process
+            
         } 
 
         printf("\n");
@@ -157,19 +157,18 @@ void pyramid(){
         for (int j = i; j >=1; j--)
         {
             printf("*     ");
-            // Sleep(300);// to slow the process
+           
         } 
 
         printf("\n");
     }
 
-    Sleep(500);
+    SLEEP_MS(500);
 
  }
 
 
  void butterfly(){
-    // system("cls");
 
     int n = 0;
     printf("Enter height of butterfly: ");
@@ -182,8 +181,6 @@ void pyramid(){
         for (int j = 1; j <=i; j++)
         {
             printf("*");
-            // Sleep(300);// to slow the process
-
         }
 
         for (int sp = i; sp <  n - 1; sp++){
@@ -194,8 +191,7 @@ void pyramid(){
        for (int j = 1; j <=i; j++)
         {
             printf("*");
-            // Sleep(300);// to slow the process
-
+           
         }
 
         printf("\n");
@@ -211,9 +207,7 @@ void pyramid(){
         for (int j = 1; j <=i; j++)
         {
             printf("*");
-            // Sleep(300);// to slow the process
-
-        }
+                    }
 
         for (int sp = i; sp <  n - 1; sp++){
             printf("  ");
@@ -222,20 +216,18 @@ void pyramid(){
        for (int j = 1; j <=i; j++)
         {
             printf("*");
-            // Sleep(300);// to slow the process
-
+          
         }
 
         printf("\n");
     
     }
-    Sleep(500);
+    SLEEP_MS(500);
     
  }
 
 void circle(){
   
-    // system("cls");
 
     int radius = 0;
     printf("Enter the radius: ");
@@ -255,18 +247,15 @@ void circle(){
             }else{
                 printf("   ");
             }
-            // Sleep(300);// to slow the process
-
         }
         printf("\n");
     }
 
-    Sleep(500);
+    SLEEP_MS(500);
    
 }
 void square(){
 
-    // system("cls");
     int n = 0;
     printf("Enter side of square: ");
     scanf("%d", &n);
@@ -278,13 +267,12 @@ void square(){
         for (int j = 0; j < n; j++)
         {
             printf("*  ");
-            // Sleep(300);// to slow the process
         }
 
         printf("\n");
     } 
 
-    Sleep(500);
+    SLEEP_MS(500);
 }
 
 
