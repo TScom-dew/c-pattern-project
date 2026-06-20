@@ -67,6 +67,7 @@ This repository uses GitHub Actions to automate the build and testing process on
 ---
 
 
+
 ## 🤝 Contributing
 Contributions are welcome! If you have ideas for new patterns or improvements to the current logic, feel free to fork this repository and submit a pull request.
 
