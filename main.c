@@ -2,22 +2,10 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<stdbool.h>
-#include<string.h>
-#include<ctype.h>
-// #include<windows.h>
 #include "patterns.h"
-
-/*
-! How to run
-firs command: gcc main.c patterns.c -o program
-second command : .\program
-*/
-
 
 int main(){
 
-    system("cls"); // clear the previous input
-     
     int choice = 0;
     bool isexit = false;
     bool iscorrectInput = true;
@@ -27,10 +15,10 @@ int main(){
     printf("     Let's Generate Patterns\n");
     printf("=================================\n\n");
 
-   
+ 
     while (!isexit){
 
-        printf("   Pattern's name:\n1.Triangle\n2.Reverse triangle.\n3.Pascal Triangle\n4.Pyramid\n5.Diamond\n6.Butterfly\n7.Circle\n8.Square\n ");
+        printf("Pattern's name:\n1.Triangle\n2.Reverse triangle.\n3.Pascal Triangle\n4.Pyramid\n5.Diamond\n6.Butterfly\n7.Circle\n8.Square\n ");
 
         while(iscorrectInput){
             printf("Enter your choice: ");
@@ -47,7 +35,7 @@ int main(){
 
        switch (choice)
        {
-       case 1:
+        case 1:
         
            triangle();
            break;
@@ -85,33 +73,29 @@ int main(){
        iscorrectInput = true;
        int n = 0;
       
-       bool iscontinue = false;
-       while (!iscontinue){
-        printf("Do you want next pattern.\nif yes then enter 1 or no then enter 0: ");
-        scanf("%d", &n);
+        bool iscontinue = false;
+        while (!iscontinue){
+            printf("Do you want next pattern.\nif yes then enter 1 or no then enter 0: ");
+            scanf("%d", &n);
     
-        if (n == 1) {
-            printf("choose Your Next pattern :\n");
-            isexit = false;
-            iscontinue = true;
-        }
-        else if (n == 0){
-            printf("\n=======================================\n");
-            printf("   Thanks for using the patterns program\n");
-            printf("==========================================\n\n");
-            isexit = true;
-            iscontinue = true;   // loop stop
+            if (n == 1) {
+                printf("choose Your Next pattern :\n");
+                isexit = false;
+                iscontinue = true;
+            }
+            else if (n == 0){
+                printf("\n=======================================\n");
+                printf("   Thanks for using the patterns program\n");
+                printf("==========================================\n\n");
+                isexit = true;
+                iscontinue = true;   // loop stop
 
+            }
+            else{
+                printf("Please enter 1 or 0 !\n");
+            }
         }
-        else{
-            printf("Please enter 1 or 0 !\n");
-        }
-    }
         
-       
     }
-
-
-
     return 0;
 }
