@@ -1,5 +1,14 @@
 # C Pattern Project 🔥
-![Build Status](https://github.com/TScom-dew/c-pattern-project/actions/workflows/c-cpp.yml/badge.svg)
+
+<p align="center">
+  <img src="https://github.com/TScom-dew/c-pattern-project/actions/workflows/c-cpp.yml/badge.svg"/>
+</p>
+<p align="center">
+  
+  <img src="https://img.shields.io/badge/Language-C-blue.svg">
+  <img src="https://img.shields.io/badge/License-MIT-green.svg">
+  <img src="https://img.shields.io/github/last-commit/TScom-dew/c-pattern-project">
+</p>
 
 A console-based C program designed to generate various geometric...
 A console-based C program designed to generate various geometric and mathematical patterns. This project serves as a great tool for understanding nested loops and logic in C programming.
@@ -68,8 +77,6 @@ This repository uses GitHub Actions to automate the build and testing process on
 
 
 ---
-
-
 
 ## 🤝 Contributing
 Contributions are welcome! If you have ideas for new patterns or improvements to the current logic, feel free to fork this repository and submit a pull request.
